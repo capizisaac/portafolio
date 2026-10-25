@@ -1,38 +1,56 @@
-/* RESET Y VARIABLES GLOBALES */
+/* ==========================================
+   VARIABLES CSS (:root) 
+   ========================================== */
+:root {
+    --color-morado: #572364;   /* Morado Real Madrid */
+    --color-dorado: #febe10;   /* Dorado Oficial */
+    --color-negro: #121212;    /* Negro Fondo */
+    --color-blanco: #ffffff;   /* Blanco */
+    --color-fondo: #f9f9fb;    /* Fondo claro */
+    --color-texto: #1a1a1a;    /* Texto principal */
+    --color-borde: #e2e2e8;    /* Borde sutil */
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #f9f9fb;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
 }
 
-/* ENCABEZADO Y NAVEGACIÓN (Negro, Morado Madrid y Dorado) */
+/* ==========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
 header {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     padding: 1.5rem 2rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid #febe10; /* Dorado oficial */
+    border-bottom: 3px solid var(--color-dorado);
 }
 
 header h1 {
     font-size: 1.8rem;
     margin-bottom: 0.3rem;
-    color: #ffffff;
 }
 
 header p {
     font-size: 0.95rem;
-    color: #febe10; /* Texto secundario dorado */
+    color: var(--color-dorado);
     margin-bottom: 1rem;
 }
 
@@ -45,17 +63,19 @@ nav ul {
 }
 
 nav a {
-    color: #ffffff;
+    color: var(--color-blanco);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #9d4edd; /* Morado claro al pasar el cursor */
+    color: var(--color-dorado);
 }
 
-/* CONTENEDOR PRINCIPAL Y SECCIONES */
+/* ==========================================
+   CONTENEDOR PRINCIPAL Y SECCIONES
+   ========================================== */
 main {
     max-width: 1000px;
     margin: 0 auto;
@@ -65,22 +85,24 @@ main {
 section {
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e2e8;
+    border: 1px solid var(--color-borde);
     scroll-margin-top: 140px;
 }
 
 h2 {
     margin-bottom: 1.2rem;
-    color: #572364; /* Morado Real Madrid */
-    border-bottom: 3px solid #febe10; /* Línea inferior dorada */
+    color: var(--color-morado);
+    border-bottom: 3px solid var(--color-dorado);
     display: inline-block;
     padding-bottom: 0.3rem;
 }
 
-/* SECCIÓN INICIO (.hero) */
+/* ==========================================
+   SECCIÓN INICIO (.hero)
+   ========================================== */
 .hero {
     text-align: center;
 }
@@ -96,11 +118,13 @@ h2 {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 1.5rem;
-    border: 4px solid #572364; /* Borde Morado Madrid */
-    box-shadow: 0 0 12px rgba(254, 190, 16, 0.6); /* Resplandor Dorado */
+    border: 4px solid var(--color-morado);
+    box-shadow: 0 0 12px rgba(254, 190, 16, 0.6);
 }
 
-/* SECCIÓN HABILIDADES (.skills) */
+/* ==========================================
+   SECCIÓN HABILIDADES (.skills)
+   ========================================== */
 .contenedor-skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -109,23 +133,25 @@ h2 {
 }
 
 .tarjeta-skill {
-    background-color: #f3ebf5; /* Fondo morado tenue */
+    background-color: #f3ebf5;
     padding: 1rem;
     border-radius: 6px;
     text-align: center;
     font-weight: 600;
-    color: #572364; /* Morado Real Madrid */
-    border-left: 4px solid #febe10; /* Detalle lateral dorado */
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    color: var(--color-morado);
+    border-left: 4px solid var(--color-dorado);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .tarjeta-skill:hover {
     transform: translateY(-3px);
-    background-color: #572364;
-    color: #ffffff;
+    background-color: var(--color-morado);
+    color: var(--color-blanco);
 }
 
-/* SECCIÓN PROYECTOS (.projects) */
+/* ==========================================
+   SECCIÓN PROYECTOS (.projects)
+   ========================================== */
 .contenedor-proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -134,45 +160,47 @@ h2 {
 }
 
 .tarjeta-proyecto {
-    border: 1px solid #e1e4e8;
+    border: 1px solid var(--color-borde);
     padding: 1.5rem;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffffff;
-    transition: box-shadow 0.3s, border-color 0.3s;
+    background-color: var(--color-blanco);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .tarjeta-proyecto:hover {
     box-shadow: 0 4px 14px rgba(87, 35, 100, 0.2);
-    border-color: #febe10;
+    border-color: var(--color-dorado);
 }
 
 .tarjeta-proyecto h3 {
     margin-bottom: 0.5rem;
-    color: #121212;
+    color: var(--color-negro);
 }
 
 .enlace-proyecto {
     display: inline-block;
     margin-top: 1rem;
-    color: #572364;
+    color: var(--color-morado);
     text-decoration: none;
     font-weight: bold;
 }
 
 .enlace-proyecto:hover {
-    color: #febe10;
+    color: var(--color-dorado);
     text-decoration: underline;
 }
 
-/* SECCIÓN CONTACTO (.contacto) */
+/* ==========================================
+   SECCIÓN CONTACTO (REDES SOCIALES)
+   ========================================== */
 .contenedor-contacto {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .enlace-contacto {
@@ -180,18 +208,18 @@ h2 {
     align-items: center;
     gap: 0.6rem;
     padding: 0.8rem 1.2rem;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
     text-decoration: none;
     border-radius: 6px;
     font-weight: 500;
-    border: 1px solid #febe10; /* Borde dorado */
-    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid var(--color-dorado);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .enlace-contacto:hover {
-    background-color: #572364; /* Morado Madrid en hover */
-    border-color: #572364;
+    background-color: var(--color-morado);
+    border-color: var(--color-morado);
     transform: translateY(-2px);
 }
 
@@ -202,15 +230,14 @@ h2 {
     border-radius: 4px;
 }
 
-/* FOOTER */
+/* ==========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================== */
 footer {
     text-align: center;
     padding: 2rem;
-    background-color: #121212;
-    color: #febe10;
+    background-color: var(--color-negro);
+    color: var(--color-dorado);
     font-size: 0.9rem;
-    border-top: 2px solid #572364;
-}
-html {
-    scroll-behavior: smooth;
+    border-top: 2px solid var(--color-morado);
 }
