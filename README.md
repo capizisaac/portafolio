@@ -13,5 +13,13 @@ Proyecto de desarrollo web desarrollado con HTML5 semántico y CSS3 puro, estruc
 - **Negro de Contraste:** `#121212`
 - **Blanco de Fondo:** `#f9f9fb`
 
+
+##  Instrucciones para Ver y Ejecutar el Proyecto
+
+### Opción 1: Abrir directamente en el navegador (Sin dependencias)
+1. Descarga o clona este repositorio en tu computadora:
+   ```bash
+   git clone [https://github.com/capizisaac/portafolio.git](https://github.com/capizisaac/portafolio.git)
+
 ## Autor
 **Isaac Canales** — Estudiante de Ingeniería en Sistemas Inteligentes.
